@@ -47,31 +47,44 @@ public class FormActivity extends AppCompatActivity {
                 if(String.valueOf(input_name.getText()).isEmpty()){
                     text_name_msg.setText("Enter Something!");
                     flag=false;
+                }else{
+                    text_name_msg.setText(" ");
                 }
+
                 if(String.valueOf(input_email.getText()).isEmpty()){
                     text_email_msg.setText("Enter Something!");
                     flag=false;
+                }else{
+                    text_email_msg.setText(" ");
                 }
+
                 if(password.isEmpty()){
                     text_password_msg.setText("Enter Something!");
                     flag=false;
+                }else{
+                    text_password_msg.setText(" ");
                 }
+
                 if(confirm.isEmpty()){
                     text_confirm_msg.setText("Enter Something!");
                     flag=false;
+                }else{
+                    text_confirm_msg.setText(" ");
                 }
-                if(!confirm.isEmpty()||!password.equals(confirm)){
+
+                if(!confirm.isEmpty()&&!password.equals(confirm)){
                     text_confirm_msg.setText("Not Match!");
                     flag=false;
                 }
+
                 //pop toast msg if all fields are completed and passwords match
-                //if(flag){
+                if(flag){
                     Context context = getApplicationContext();
                     String text = "welcome, "+name+", to the SignUpForm App";
                     int duration = Toast.LENGTH_SHORT;
                     Toast toast=Toast.makeText(context, text, duration);
                     toast.show();
-                //}
+                }
             }
         });
     }
