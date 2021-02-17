@@ -45,35 +45,35 @@ public class FormActivity extends AppCompatActivity {
                 //flag to check if all fields are filled and password matches with confirmation
                 boolean flag = true;
                 if(String.valueOf(input_name.getText()).isEmpty()){
-                    text_name_msg.setText("Enter Something!");
+                    text_name_msg.setText("Can't be empty here!");
                     flag=false;
                 }else{
                     text_name_msg.setText(" ");
                 }
 
                 if(String.valueOf(input_email.getText()).isEmpty()){
-                    text_email_msg.setText("Enter Something!");
+                    text_email_msg.setText("Can't be empty here!");
                     flag=false;
                 }else{
                     text_email_msg.setText(" ");
                 }
 
                 if(password.isEmpty()){
-                    text_password_msg.setText("Enter Something!");
+                    text_password_msg.setText("Can't be empty here!");
                     flag=false;
                 }else{
                     text_password_msg.setText(" ");
                 }
 
                 if(confirm.isEmpty()){
-                    text_confirm_msg.setText("Enter Something!");
+                    text_confirm_msg.setText("Can't be empty here!");
                     flag=false;
                 }else{
                     text_confirm_msg.setText(" ");
                 }
 
                 if(!confirm.isEmpty()&&!password.equals(confirm)){
-                    text_confirm_msg.setText("Not Match!");
+                    text_confirm_msg.setText("Not match!");
                     flag=false;
                 }
 
