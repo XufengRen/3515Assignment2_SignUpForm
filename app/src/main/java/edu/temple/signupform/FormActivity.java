@@ -67,7 +67,7 @@ public class FormActivity extends AppCompatActivity {
                 //pop toast msg if all fields are completed and passwords match
                 //if(flag){
                     Context context = getApplicationContext();
-                    String text = "welcome!";
+                    String text = "welcome, "+name+", to the SignUpForm App";
                     int duration = Toast.LENGTH_SHORT;
                     Toast toast=Toast.makeText(context, text, duration);
                     toast.show();
